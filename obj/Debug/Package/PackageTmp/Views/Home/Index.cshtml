@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "For Wakefern Interview";
+}
+
+
+<div ng-app="shopriteapp" ng-controller="shopriteController" ng-cloak>
+    <div class="text-center padding-bottom-30 border-bottom margin-bottom-10">
+        <div class="row header">
+            <div class="col-sm-2">
+                <img src="~/Content/images/curlybraces-left.png" />
+            </div>
+            <div class="col-sm-8 col-xs-12">
+                <div class="heroImage"></div>
+            </div>
+            <div class="col-md-2">
+                <img src="~/Content/images/curlybraces-right.png" />
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    
+        @*<span><button ng-click="goGetStores" class="btn btn-primary btn-lg">getData</button></span>*@
+    <div class="margin-bottom-400 text-center" ng-if="stores.length === 0 && circular.length === 0">
+        <button ng-click="goGetStores()" class="btn btn-primary margin-top--40">Async Get Stores Call</button>
+    </div>
+
+    
+    <div class="margin-bottom-10 text-center" ng-show="stores.length > 0 && circular.length === 0">
+        <input class="filterInput" type="text" placeholder="Filter Stores" ng-model="filterString"
+               onfocus="this.placeholder = ''" onblur="this.placeholder = 'Filter Stores'" />
+    </div>
+    <div class="row margin-bottom-10" ng-show="circular.length > 0">
+        <div class="col-sm-2 hidden-xs">
+
+        </div>
+        <div class="col-sm-8 col-xs-12 text-center padding-0">
+            <div class="col-xs-4 padding-0 margin-top--28">
+                <button ng-disabled="pageNum === 1" class="btn btn-default " ng-click="prevPage()">Prev Page</button>
+            </div>
+            <div class="col-xs-4 padding-0 margin-top--28">
+                <button class="btn btn-primary" ng-click="goBack()">Go Back</button>
+            </div>
+            <div class="col-xs-4 padding-0 margin-top--28">
+                <button ng-disabled="pageNum === 12" class="btn btn-default" ng-click="nextPage()">Next Page</button>
+            </div>
+        </div>
+        <div class="col-sm-2 hidden-xs">
+
+        </div>
+    </div>
+    <div class="container" ng-show="circular.length === 0 && stores.length > 0">
+        {{filterStores(filterString).length}} Stores
+        <div class="row cards">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 margin-bottom-10" ng-repeat="item in filterStores(filterString)">
+                <store-card item="item"></store-card>
+            </div>
+        </div>
+    </div>
+    <div class="container margin-top-45" ng-show="circular.length > 0">
+        {{circular.length}} Delicious Items
+        <div class="row cards">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 padding-bottom-10" ng-repeat="item in circular">
+                <product-card item="item"></product-card>
+            </div>
+        </div>        
+    </div>
+</div>
