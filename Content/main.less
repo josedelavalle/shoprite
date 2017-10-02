@@ -17,8 +17,15 @@ img {
     padding: 8px 40px;
     border: 1px solid #ddd !important;
 }
+.btn {
+    @media only screen and (max-width: 768px) {
+        min-width: 100px;
+    }
+
+    min-width: 182px;
+}
 .allMapsButton {
-    width: 182px;
+    //width: 182px;
     top: -31px !important;
     @media only screen and (max-width: 768px) {
         display: none !important;
@@ -38,7 +45,7 @@ img {
 
     .btn.disabled, .btn[disabled], fieldset[disabled] {
         opacity: 1 !important;
-        background-color: #ffeaec;
+        background-color: #f7f7f7;
     }
 
     .displayInline {

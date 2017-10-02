@@ -168,9 +168,28 @@
 * {
   outline: none !important;
 }
+img {
+  user-select: none;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #333333;
+}
 .startButton {
   padding: 8px 40px;
   border: 1px solid #ddd !important;
+}
+.btn {
+  min-width: 182px;
+}
+.allMapsButton {
+  top: -31px !important;
+  display: inline !important;
+}
+@media only screen and (max-width: 768px) {
+  .allMapsButton {
+    display: none !important;
+  }
 }
 .filterInput {
   position: relative;
@@ -184,13 +203,12 @@
 .btn[disabled],
 fieldset[disabled] {
   opacity: 1 !important;
-  background-color: #ffeaec;
+  background-color: #f7f7f7;
 }
 .displayInline {
   display: inline !important;
 }
 .eventFilterText {
-  display: inline !important;
   position: relative;
   top: -6px;
   left: -10px;

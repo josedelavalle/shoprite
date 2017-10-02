@@ -4,7 +4,7 @@
 
 
 <div ng-app="shopriteapp" ng-controller="shopriteController" id="app" ng-cloak>
-    <div class="text-center padding-bottom-30 border-bottom margin-bottom-10">
+    <div class="text-center padding-bottom-30 border-bottom margin-bottom-10 margin-top-20">
         <div class="row header">
             <div class="col-sm-2">
                 <img src="~/Content/images/curlybraces-left.png" />
@@ -42,7 +42,7 @@
                 <button ng-disabled="pageNum === 1" class="btn btn-default " ng-click="prevPage()">Prev Page</button>
             </div>
             <div class="col-xs-4 padding-0 margin-top--28">
-                <button class="btn btn-primary" ng-click="goBack()">Go Back</button>
+                <button class="btn btn-danger" ng-click="goBack()">Store List</button>
             </div>
             <div class="col-xs-4 padding-0 margin-top--28">
                 <button ng-disabled="pageNum === 12" class="btn btn-default" ng-click="nextPage()">Next Page</button>

@@ -271,13 +271,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/01/2017 11:25:47</publishTime>
     </File>
     <File Include="Content/main.css">
-      <publishTime>10/01/2017 14:57:56</publishTime>
+      <publishTime>10/01/2017 20:42:00</publishTime>
     </File>
     <File Include="Content/main.less">
-      <publishTime>10/01/2017 14:57:56</publishTime>
+      <publishTime>10/01/2017 20:41:59</publishTime>
     </File>
     <File Include="Content/main.min.css">
-      <publishTime>10/01/2017 14:57:56</publishTime>
+      <publishTime>10/01/2017 20:42:00</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/29/2017 20:11:44</publishTime>
@@ -307,7 +307,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2017 20:11:44</publishTime>
     </File>
     <File Include="Scripts/app.js">
-      <publishTime>10/01/2017 14:58:40</publishTime>
+      <publishTime>10/01/2017 20:20:22</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>09/29/2017 20:11:49</publishTime>
@@ -361,7 +361,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/30/2017 22:33:48</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/01/2017 14:57:01</publishTime>
+      <publishTime>10/01/2017 20:39:09</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/29/2017 20:11:44</publishTime>

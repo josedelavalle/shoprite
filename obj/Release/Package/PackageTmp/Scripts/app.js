@@ -32,9 +32,9 @@ function storeCardDirective() {
 
 app.controller('shopriteController', shopriteController);
 
-shopriteController.$inject = ['$scope', '$window', 'shopriteFactory', 'NgMap'];
+shopriteController.$inject = ['$scope', '$window', '$interval', 'shopriteFactory', 'NgMap'];
 
-function shopriteController($scope, $window, shopriteFactory, NgMap) {
+function shopriteController($scope, $window, $interval, shopriteFactory, NgMap) {
     console.log('shop rite controller', Date());
     $scope.stores = [];
     $scope.circular = [];
@@ -43,6 +43,7 @@ function shopriteController($scope, $window, shopriteFactory, NgMap) {
     var getCircular = function (circularUrl, pageNum, ndx) {
         shopriteFactory.getWeeklyCircular(circularUrl, pageNum).then(function (res) {
             console.log('got weekly circular', res);
+            scrollToTop();
             $scope.validDates = res.data.validDates;
             $scope.circular = res.data.dataList;
             if ($scope.circular.length === 0) {
@@ -65,7 +66,7 @@ function shopriteController($scope, $window, shopriteFactory, NgMap) {
 
     $scope.eventClick = function (item) {
         var e = $scope.events.filter(x => item.name.trim().indexOf(x.store.trim()) >= 0);
-        if (e.length == 0) {
+        if (e.length === 0) {
             item.events = false;
         } else {
             $window.open(e[0].link, "_blank");
@@ -74,7 +75,7 @@ function shopriteController($scope, $window, shopriteFactory, NgMap) {
 
     $scope.areEvents = function (item) {
         //if ($scope.events.filter(x => item.name.trim().indexOf(x.store.trim()) >= 0).length > 0) {
-        if ($scope.events.filter(x => item.name.trim() == x.store.trim()).length > 0) {
+        if ($scope.events.filter(x => item.name.trim() === x.store.trim()).length > 0) {
             item.events = true;
             return true;
         } else {
@@ -100,16 +101,36 @@ function shopriteController($scope, $window, shopriteFactory, NgMap) {
     $scope.filterStores = function (fs) {
         var stores;
         if (fs) {
-            stores =  $scope.stores.filter(x => x.name.indexOf(fs) >= 0 || x.address1.indexOf(fs) >= 0 || x.address2.indexOf(fs) >= 0);
+            // does entered value exist in properties of object
+            stores = $scope.stores.filter(x => x.name.indexOf(fs) >= 0
+                || x.address1.indexOf(fs) >= 0
+                || x.address2.indexOf(fs) >= 0
+                || ((x.phonenumber) && x.phonenumber.indexOf(fs) >= 0));
         } else {
             stores = $scope.stores;
         }
+        // add event filter if turned on
         if ($scope.onlyStoresWithEvents) {
-            stores = stores.filter(x => x.events == true);           
+            stores = stores.filter(x => x.events === true);           
         }
         return stores;
     }
 
+    $scope.showDisclaimer = false;
+    $scope.showAllMaps = function (i, doShow) {
+        var x = 0;
+        $scope.showDisclaimer = doShow;
+        if (doShow === false) {
+            $interval.cancel(promise);
+        }
+        promise = $interval(function () {
+            $scope.stores[x].showmap = doShow;
+            x++;
+            if (x == $scope.stores.length) $scope.showDisclaimer = false;
+        }, i, $scope.stores.length);
+
+    }
+    
     $scope.nextPage = function (link) {
         $scope.pageNum++;
         getCircular($scope.link, $scope.pageNum);
@@ -129,7 +150,6 @@ function shopriteController($scope, $window, shopriteFactory, NgMap) {
     }
 
     $scope.goGetCircular = function (link, name, ndx) {
-        scrollToTop();
         $scope.link = link;
         $scope.thisStore = name;
         console.log('name', name);

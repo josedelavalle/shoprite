@@ -112,6 +112,7 @@
     background: @lightGray;
     color: @darkestGrey;
     border-radius: @radius @radius 0 0;
+    //min-height: 50px;
     /*border-left: 1px solid @medGray;
     border-top: 1px solid @medGray;
     border-right: 1px solid @medGray;*/
@@ -120,15 +121,21 @@
 .list-card-title {
     font-weight: 700;
     font-size: 14px;
+    margin-right: 25px;
+}
+.list-card-expand-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 .list-card-image {
-    height: 175px;
+    height: 190px;
     padding: 0;
     .cardImage {
-        height: 175px;
+        height: 190px;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center bottom;
+        background-position: center;
     }
     .map {
         height: 100%;

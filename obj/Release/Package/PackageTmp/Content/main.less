@@ -6,88 +6,112 @@
 * {
     outline: none !important;
 }
+img {
+    user-select: none;
+}
 
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #333333;
+}
 .startButton {
     padding: 8px 40px;
     border: 1px solid #ddd !important;
 }
-.filterInput {
-    position: relative;
-    top: -30px;
-    text-align: center;
-    padding: 8px 5px;
-    border: 1px solid #ddd;
-    border-radius: @radius;
+.btn {
+    min-width: 182px;
 }
+.allMapsButton {
+    //width: 182px;
+    top: -31px !important;
+    @media only screen and (max-width: 768px) {
+        display: none !important;
+    }
 
-.btn.disabled, .btn[disabled], fieldset[disabled] {
-    opacity: 1 !important;
-    background-color: #ffeaec;
-}
-.displayInline {
     display: inline !important;
 }
-.eventFilterText {
-    display: inline !important;
-    position: relative;
-    top: -6px;
-    left: -10px;
-}
-.header {
-    display: flex;
-    flex-wrap: nowrap;
 
-    div {
-        justify-content: center;
-        align-items: center;
+    .filterInput {
+        position: relative;
+        top: -30px;
+        text-align: center;
+        padding: 8px 5px;
+        border: 1px solid #ddd;
+        border-radius: @radius;
+    }
 
-        img {
-            margin-top: 50px;
-            opacity: 0.05;
-            filter: alpha(opacity=5);
+    .btn.disabled, .btn[disabled], fieldset[disabled] {
+        opacity: 1 !important;
+        background-color: #f7f7f7;
+    }
 
-            @media only screen and (min-width: 769px) and (max-width: 992px) {
-                margin-top: 20px;
-            }
+    .displayInline {
+        display: inline !important;
+    }
 
-            @media only screen and (max-width: 768px) {
-                height: 100px;
-                margin-top: 0px;
+    .eventFilterText {
+        position: relative;
+        top: -6px;
+        left: -10px;
+    }
+
+    .header {
+        display: flex;
+        flex-wrap: nowrap;
+
+        div {
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin-top: 50px;
+                opacity: 0.05;
+                filter: alpha(opacity=5);
+
+                @media only screen and (min-width: 769px) and (max-width: 992px) {
+                    margin-top: 20px;
+                }
+
+                @media only screen and (max-width: 768px) {
+                    height: 100px;
+                    margin-top: 0px;
+                }
             }
         }
     }
-}
-.heroImage {
-    @media only screen and (max-width: 768px) {
-        height: 100px;
+
+    .heroImage {
+        @media only screen and (max-width: 768px) {
+            height: 100px;
+        }
+
+
+        @media only screen and (min-width: 769px) and (max-width: 992px) {
+            height: 200px;
+        }
+
+        height: 300px;
+        width: 100%;
+        background: url('images/shoprite-trans.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-        height: 200px;
+    .pointer-hover {
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    height: 300px;
-    width: 100%;
-    background: url('images/shoprite-trans.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.pointer-hover {
-    &:hover {
-        cursor: pointer;
+    .fullwidth {
+        width: 100%;
     }
-}
 
-.fullwidth {
-    width: 100%;
-}
-.border-bottom {
-    border-bottom: 1px solid #ddd;
-}
+    .border-bottom {
+        border-bottom: 1px solid #ddd;
+    }
 
-.big-checkbox {
-    width: 20px;
-    height: 20px;
-}
+    .big-checkbox {
+        width: 20px;
+        height: 20px;
+    }
