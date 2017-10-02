@@ -36,7 +36,7 @@
   -o-transition: width 350ms;
   transition: width 350ms;
 
-  background: #29d;
+  background: red;
   position: fixed;
   z-index: 10002;
   top: 0;
@@ -81,7 +81,7 @@
 
   border:  solid 5px transparent;
   border-top-color:  red;
-  border-left-color: orange;
+  border-left-color: red;
   border-radius: 50%;
 
   -webkit-animation: loading-bar-spinner 400ms linear infinite;

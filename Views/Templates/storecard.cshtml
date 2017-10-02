@@ -1,10 +1,10 @@
 ﻿<div class="list-card-container">
     <div class="list-card">
-        <div class="list-card-heading col-xs-12">
-            <span class="list-card-title">{{item.name}}</span>
+        <div class="list-card-heading col-xs-12" ng-click="item.showmap=!item.showmap">
+            <span class="list-card-title pointer-hover">{{item.name}}</span>
         </div>
         <div class="col-xs-12 list-card-image">
-            <div ng-if="!item.showmap" class="cardImage" style="background-image: url('http://unsplash.it/175/255?image={{item.id + 10}}'), url('https://unsplash.it/200/300/?random')"></div>
+            <div ng-if="!item.showmap" ng-click="item.showmap=!item.showmap" class="cardImage pointer-hover" style="background-image: url('http://unsplash.it/175/255?image={{item.id + 10}}'), url('https://unsplash.it/200/300/?random')"></div>
             <ng-map ng-if="item.showmap" center="{{item.address1}} {{item.address2}}" class="map"></ng-map>
         </div>
         <div class="col-xs-12 list-card-info pointer-hover" ng-click="item.showmap=true">
@@ -15,8 +15,9 @@
         <div class="col-xs-12 list-card-button">
             <button ng-if="!item.hidden" ng-click="goGetCircular(item.link, item.name, $index)" class="btn fullwidth btn-default">Weekly Circular</button>
             <button ng-if="item.hidden" class="btn btn-danger fullwidth">No Circular Available</button>
-            <button ng-if="!item.showmap" ng-click="item.showmap=true" class="btn btn-default fullwidth">Show Map</button>
-            <button ng-if="item.showmap" ng-click="item.showmap=false" class="btn btn-default fullwidth">Hide Map</button>
+            <button ng-if="!item.showmap" ng-click="item.showmap=!item.showmap" class="btn btn-default fullwidth">Show Map</button>
+            <button ng-if="item.showmap" ng-click="item.showmap=!item.showmap" class="btn btn-default fullwidth">Hide Map</button>
+            <button ng-if="areEvents(item)" ng-click="eventClick(item)" class="btn btn-default fullwidth">View Events</button>
         </div>
     </div>
 </div>

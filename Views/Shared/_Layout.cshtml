@@ -27,7 +27,8 @@
 
     <!-- default browser icon -->
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="~/favicon.ico" type="image/ico" />
+    <link runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -45,9 +46,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a target="_blank" href="http://portfolio.josedelavalle.com">More From Me</a></li>
                 </ul>
             </div>
         </div>

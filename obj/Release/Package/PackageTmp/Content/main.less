@@ -1,11 +1,16 @@
 ﻿
 @import 'components/_cards';
+@import 'components/_spacing';
 @import 'utilities/_variables.less';
 
 * {
-    outline: none;
+    outline: none !important;
 }
 
+.startButton {
+    padding: 8px 40px;
+    border: 1px solid #ddd !important;
+}
 .filterInput {
     position: relative;
     top: -30px;
@@ -19,9 +24,18 @@
     opacity: 1 !important;
     background-color: #ffeaec;
 }
+.displayInline {
+    display: inline !important;
+}
+.eventFilterText {
+    display: inline !important;
+    position: relative;
+    top: -6px;
+    left: -10px;
+}
 .header {
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
 
     div {
         justify-content: center;
@@ -69,57 +83,11 @@
 .fullwidth {
     width: 100%;
 }
-.margin-0 {
-    margin: 0 !important;
-}
-.padding-0 {
-    padding: 0 !important;
-}
-.padding-5 {
-    padding: 5px !important;
-}
-.margin-top--40 {
-    margin-top: -40px;
-}
-.margin-top--28 {
-    margin-top: -28px;
-}
-.margin-top-20 {
-    margin-top: 20px;
-}
-.margin-top-45 {
-    margin-top: 45px;
-}
-
-.margin-bottom-20 {
-    margin-bottom: 20px !important;
-}
-.margin-bottom-400 {
-    margin-bottom: 400px !important;
-}
-
-.margin-bottom-10 {
-    margin-bottom: 10px !important;
-}
-.padding-bottom-10 {
-    padding-bottom: 10px;
-}
-.padding-bottom-20 {
-    padding-bottom: 20px;
-}
-.padding-bottom-30 {
-    padding-bottom: 30px;
-}
-.padding-top-20 {
-    padding-top: 20px;
-}
-.padding-top-30 {
-    padding-top: 30px;
-}
-.padding-top-40 {
-    padding-top: 40px;
-}
 .border-bottom {
     border-bottom: 1px solid #ddd;
 }
 
+.big-checkbox {
+    width: 20px;
+    height: 20px;
+}

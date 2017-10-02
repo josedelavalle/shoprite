@@ -111,8 +111,83 @@
 .list-card-button button {
   margin: 5px 0;
 }
+.margin-0 {
+  margin: 0 !important;
+}
+.padding-0 {
+  padding: 0 !important;
+}
+.padding-5 {
+  padding: 5px !important;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-top--40 {
+  margin-top: -40px;
+}
+.margin-top--42 {
+  margin-top: -42px;
+}
+.margin-top--28 {
+  margin-top: -28px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-45 {
+  margin-top: 45px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px !important;
+}
+.margin-bottom-400 {
+  margin-bottom: 400px !important;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px !important;
+}
+.padding-bottom-10 {
+  padding-bottom: 10px;
+}
+.padding-bottom-20 {
+  padding-bottom: 20px;
+}
+.padding-bottom-30 {
+  padding-bottom: 30px;
+}
+.padding-top-20 {
+  padding-top: 20px;
+}
+.padding-top-30 {
+  padding-top: 30px;
+}
+.padding-top-40 {
+  padding-top: 40px;
+}
 * {
-  outline: none;
+  outline: none !important;
+}
+img {
+  user-select: none;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #333333;
+}
+.startButton {
+  padding: 8px 40px;
+  border: 1px solid #ddd !important;
+}
+.allMapsButton {
+  width: 182px;
+  top: -31px !important;
+  display: inline !important;
+}
+@media only screen and (max-width: 768px) {
+  .allMapsButton {
+    display: none !important;
+  }
 }
 .filterInput {
   position: relative;
@@ -128,9 +203,17 @@ fieldset[disabled] {
   opacity: 1 !important;
   background-color: #ffeaec;
 }
+.displayInline {
+  display: inline !important;
+}
+.eventFilterText {
+  position: relative;
+  top: -6px;
+  left: -10px;
+}
 .header {
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
 }
 .header div {
   justify-content: center;
@@ -176,54 +259,10 @@ fieldset[disabled] {
 .fullwidth {
   width: 100%;
 }
-.margin-0 {
-  margin: 0 !important;
-}
-.padding-0 {
-  padding: 0 !important;
-}
-.padding-5 {
-  padding: 5px !important;
-}
-.margin-top--40 {
-  margin-top: -40px;
-}
-.margin-top--28 {
-  margin-top: -28px;
-}
-.margin-top-20 {
-  margin-top: 20px;
-}
-.margin-top-45 {
-  margin-top: 45px;
-}
-.margin-bottom-20 {
-  margin-bottom: 20px !important;
-}
-.margin-bottom-400 {
-  margin-bottom: 400px !important;
-}
-.margin-bottom-10 {
-  margin-bottom: 10px !important;
-}
-.padding-bottom-10 {
-  padding-bottom: 10px;
-}
-.padding-bottom-20 {
-  padding-bottom: 20px;
-}
-.padding-bottom-30 {
-  padding-bottom: 30px;
-}
-.padding-top-20 {
-  padding-top: 20px;
-}
-.padding-top-30 {
-  padding-top: 30px;
-}
-.padding-top-40 {
-  padding-top: 40px;
-}
 .border-bottom {
   border-bottom: 1px solid #ddd;
+}
+.big-checkbox {
+  width: 20px;
+  height: 20px;
 }

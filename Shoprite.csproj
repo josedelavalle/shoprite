@@ -169,6 +169,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\curlybraces-left.png" />
     <Content Include="Content\images\curlybraces-right.png" />
+    <Content Include="Content\images\no-image.jpg" />
     <Content Include="Content\images\shoprite-trans.jpg" />
     <Content Include="Content\images\shoprite.jpg" />
     <Content Include="Content\loading-bar.css" />
@@ -196,6 +197,7 @@
     <Content Include="Content\components\_cards.less" />
     <Content Include="Content\utilities\_variables.less" />
     <Content Include="Content\utilities\_mixins.less" />
+    <Content Include="Content\components\_spacing.less" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -247,6 +249,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

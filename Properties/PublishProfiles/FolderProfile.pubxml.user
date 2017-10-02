@@ -202,10 +202,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/13/2017 15:47:48</publishTime>
     </File>
     <File Include="bin/shoprite.dll">
-      <publishTime>09/30/2017 19:19:18</publishTime>
+      <publishTime>10/01/2017 15:20:53</publishTime>
     </File>
     <File Include="bin/shoprite.pdb">
-      <publishTime>09/30/2017 19:19:18</publishTime>
+      <publishTime>10/01/2017 15:20:53</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/28/2015 03:02:42</publishTime>
@@ -247,7 +247,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2017 20:11:49</publishTime>
     </File>
     <File Include="Content/components/_cards.less">
-      <publishTime>09/30/2017 19:10:39</publishTime>
+      <publishTime>09/30/2017 22:02:11</publishTime>
+    </File>
+    <File Include="Content/components/_spacing.less">
+      <publishTime>10/01/2017 14:57:27</publishTime>
     </File>
     <File Include="Content/images/curlybraces-left.png">
       <publishTime>09/30/2017 17:27:48</publishTime>
@@ -255,20 +258,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/images/curlybraces-right.png">
       <publishTime>09/30/2017 17:28:26</publishTime>
     </File>
+    <File Include="Content/images/no-image.jpg">
+      <publishTime>09/30/2017 21:45:03</publishTime>
+    </File>
     <File Include="Content/images/shoprite-trans.jpg">
       <publishTime>09/30/2017 17:14:08</publishTime>
     </File>
     <File Include="Content/images/shoprite.jpg">
       <publishTime>09/30/2017 09:46:38</publishTime>
     </File>
+    <File Include="Content/loading-bar.css">
+      <publishTime>10/01/2017 11:25:47</publishTime>
+    </File>
     <File Include="Content/main.css">
-      <publishTime>09/30/2017 19:10:39</publishTime>
+      <publishTime>10/01/2017 14:57:56</publishTime>
     </File>
     <File Include="Content/main.less">
-      <publishTime>09/30/2017 18:56:46</publishTime>
+      <publishTime>10/01/2017 14:57:56</publishTime>
     </File>
     <File Include="Content/main.min.css">
-      <publishTime>09/30/2017 19:10:39</publishTime>
+      <publishTime>10/01/2017 14:57:56</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/29/2017 20:11:44</publishTime>
@@ -280,7 +289,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/30/2017 12:49:30</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>09/30/2017 14:19:45</publishTime>
+      <publishTime>10/01/2017 15:20:18</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>09/29/2017 20:11:49</publishTime>
@@ -298,7 +307,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2017 20:11:44</publishTime>
     </File>
     <File Include="Scripts/app.js">
-      <publishTime>09/30/2017 21:07:59</publishTime>
+      <publishTime>10/01/2017 14:58:40</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>09/29/2017 20:11:49</publishTime>
@@ -339,6 +348,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/vendor/angular.min.js">
       <publishTime>09/29/2017 22:39:04</publishTime>
     </File>
+    <File Include="Scripts/vendor/loading-bar.js">
+      <publishTime>09/30/2017 22:15:04</publishTime>
+    </File>
     <File Include="Scripts/vendor/ng-map.min.js">
       <publishTime>09/30/2017 16:03:21</publishTime>
     </File>
@@ -346,22 +358,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/30/2017 14:56:53</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>09/30/2017 13:56:07</publishTime>
+      <publishTime>09/30/2017 22:33:48</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/30/2017 21:03:43</publishTime>
+      <publishTime>10/01/2017 14:57:01</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/29/2017 20:11:44</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/30/2017 16:12:17</publishTime>
+      <publishTime>10/01/2017 15:15:39</publishTime>
     </File>
     <File Include="Views/Templates/productcard.cshtml">
-      <publishTime>09/30/2017 18:21:45</publishTime>
+      <publishTime>10/01/2017 11:30:50</publishTime>
     </File>
     <File Include="Views/Templates/storecard.cshtml">
-      <publishTime>09/30/2017 20:45:15</publishTime>
+      <publishTime>10/01/2017 14:18:25</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/29/2017 20:11:44</publishTime>

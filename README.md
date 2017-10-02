@@ -1,5 +1,1 @@
-"# shoprite" 
-"# shoprite" 
-"# shoprite" 
-"# shoprite" 
-"# shoprite" 
+# shoprite

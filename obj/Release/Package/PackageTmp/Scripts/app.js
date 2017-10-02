@@ -1,4 +1,4 @@
-﻿var app = angular.module('shopriteapp', ['ngMap']);
+﻿var app = angular.module('shopriteapp', ['ngMap', 'angular-loading-bar']);
 
 app.factory('shopriteFactory', ['$http', function ($http) {
     return {
@@ -6,7 +6,10 @@ app.factory('shopriteFactory', ['$http', function ($http) {
             return $http.get('/Home/GetWeeklyCircular?circularUrl=' + circularUrl + '&pageNum=' + pageNum);
         },
         getNearbyStores: function () {
-            return $http.get('/Home/GetNearbyStores');
+            return $http.get('/Home/GetStores');
+        },
+        getEvents: function () {
+            return $http.get('/Home/GetEvents');
         }
     };
 }]);
@@ -60,17 +63,51 @@ function shopriteController($scope, $window, shopriteFactory, NgMap) {
         });
     };
 
+    $scope.eventClick = function (item) {
+        var e = $scope.events.filter(x => item.name.trim().indexOf(x.store.trim()) >= 0);
+        if (e.length == 0) {
+            item.events = false;
+        } else {
+            $window.open(e[0].link, "_blank");
+        }
+    }
+
+    $scope.areEvents = function (item) {
+        //if ($scope.events.filter(x => item.name.trim().indexOf(x.store.trim()) >= 0).length > 0) {
+        if ($scope.events.filter(x => item.name.trim() == x.store.trim()).length > 0) {
+            item.events = true;
+            return true;
+        } else {
+            item.events = false;
+            return false;
+        }
+    }
+
+    var getEvents = function () {
+        shopriteFactory.getEvents().then(function (res) {
+            $scope.events = res.data.eventList;
+            console.log('got events', $scope.events);
+        }).catch(function (e) {
+            console.log('error getting events', e);
+        });
+    };
+    getEvents();
+
     $scope.goGetStores = function () {
         getStores();
     }
-
+    getStores();
     $scope.filterStores = function (fs) {
+        var stores;
         if (fs) {
-            return $scope.stores.filter(x => x.name.indexOf(fs) >= 0 || x.address1.indexOf(fs) >= 0 || x.address2.indexOf(fs) >= 0);
+            stores =  $scope.stores.filter(x => x.name.indexOf(fs) >= 0 || x.address1.indexOf(fs) >= 0 || x.address2.indexOf(fs) >= 0);
         } else {
-            return $scope.stores;
+            stores = $scope.stores;
         }
-        
+        if ($scope.onlyStoresWithEvents) {
+            stores = stores.filter(x => x.events == true);           
+        }
+        return stores;
     }
 
     $scope.nextPage = function (link) {
